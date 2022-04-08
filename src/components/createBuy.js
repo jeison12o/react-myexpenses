@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../style/createBuy.css";
 
 const URI = "http://localhost:3001/api/buy/";
 
@@ -25,7 +26,7 @@ const CompCreateBuy = () => {
     <div className="container d-flex justify-content-center align-items-center h-100">
       <div className="row">
         <div className="col">
-          <div className="card">
+          <div className="card ancho bg-primary" >
             <div className="card-body">
               <h3>Create</h3>
               <form onSubmit={saveBuy}>
@@ -56,8 +57,10 @@ const CompCreateBuy = () => {
                     className="form-control"
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-info">
+                <i className="fas fa-plus">
                   Save Buy
+                  </i>
                 </button>
               </form>
             </div>

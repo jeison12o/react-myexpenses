@@ -27,8 +27,8 @@ const CompShowBuys = () => {
           <Link to="/create" className="btn btn-primary mt-2 mb-2">
             <i className="fas fa-plus">new buy</i>
           </Link>
-          <table className="table">
-            <thead className="table-primary">
+          <table className="table table-primary">
+            <thead className="">
               <tr>
                 <th>name</th>
                 <th>description</th>

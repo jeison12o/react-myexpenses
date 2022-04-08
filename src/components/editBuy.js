@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const URI = "http://localhost:8000/api/buy/";
+const URI = "http://localhost:3001/api/buy/";
 
 const CompEditBuy = () => {
   const [name, setName] = useState("");
@@ -29,7 +29,6 @@ const CompEditBuy = () => {
 
   const getBuyById = async () => {
     const res = await axios.get(URI + id);
-    console.log(res);
     setName(res.data.name);
     setDescription(res.data.description);
     setValue(res.data.value);
@@ -39,7 +38,7 @@ const CompEditBuy = () => {
     <div className="container d-flex justify-content-center align-items-center h-100">
       <div className="row">
         <div className="col">
-          <div className="card">
+          <div className="card bg-dark">
             <div className="card-body">
               <h3>Create</h3>
               <form onSubmit={update}>
