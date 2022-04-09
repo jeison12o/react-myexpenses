@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../style/showBuy.css";
 
 const URI = "http://localhost:3001/api/buy/";
 
@@ -27,7 +28,7 @@ const CompShowBuys = () => {
           <Link to="/create" className="btn btn-primary mt-2 mb-2">
             <i className="fas fa-plus">new buy</i>
           </Link>
-          <table className="table table-primary">
+          <table className="table table-dark table-striped">
             <thead className="">
               <tr>
                 <th>name</th>
